@@ -1,21 +1,21 @@
 # 🧪 Test Results Report
 
-📅 **Date:** 1/30/2026, 4:09:28 PM
+📅 **Date:** 1/31/2026, 4:49:23 PM
 
 📊 **Summary:**
-- Total Tests: 33
+- Total Tests: 34
 - ✅ Passed: 24
-- ❌ Failed: 9
+- ❌ Failed: 10
 
 ---
 
 ## 1. ✅ Pos_Fun_0001
 
-📝 Input: naanum ammaavum madhiyam samaikkiroam.
+📝 Input: naanum   ammaavum madhiyam samaikkiroam.
 
-🎯 Expected Output: நானும் அம்மாவும் மதியம் சமைக்கிறோம்.
+🎯 Expected Output: நானும்   அம்மாவும் மதியம் சமைக்கிறோம்.
 
-💡 Actual Output: நானும் அம்மாவும் மதியம் சமைக்கிறோம்.
+💡 Actual Output: நானும்   அம்மாவும் மதியம் சமைக்கிறோம்.
 
 Result: ✅ PASS
 
@@ -35,11 +35,11 @@ Result: ✅ PASS
 
 ## 3. ✅ Pos_Fun_0003
 
-📝 Input: naan netru schoolkku ponaen.
+📝 Input: naan netru vavuniyaakku ponaen.
 
-🎯 Expected Output: நான் நேற்று ஸ்கூலுக்கு போனேன்.
+🎯 Expected Output: நான் நேற்று வவுனியாக்கு போனேன்.
 
-💡 Actual Output: நான் நேற்று ஸ்கூலுக்கு போனேன்.
+💡 Actual Output: நான் நேற்று வவுனியாக்கு போனேன்.
 
 Result: ✅ PASS
 
@@ -47,11 +47,11 @@ Result: ✅ PASS
 
 ## 4. ✅ Pos_Fun_0004
 
-📝 Input: satham podaadhe!
+📝 Input: satham podaadhe! 
 
-🎯 Expected Output: சத்தம் போடாதே!
+🎯 Expected Output: சத்தம் போடாதே! 
 
-💡 Actual Output: சத்தம் போடாதே!
+💡 Actual Output: சத்தம் போடாதே! 
 
 Result: ✅ PASS
 
@@ -59,7 +59,7 @@ Result: ✅ PASS
 
 ## 5. ✅ Pos_Fun_0005
 
-📝 Input: ennaiyum kootikkondu poreengealaa?
+📝 Input: Ennaiyum Kootikkondu Poreengealaa?
 
 🎯 Expected Output: என்னையும் கூட்டிக்கொண்டு போறீங்களா?
 
@@ -71,11 +71,11 @@ Result: ✅ PASS
 
 ## 6. ✅ Pos_Fun_0006
 
-📝 Input: naangal eppo povom?
+📝 Input: naangal eppo povom 😉
 
-🎯 Expected Output: நாங்கள் எப்போ போவோம்?
+🎯 Expected Output: நாங்கள் எப்போ போவோம் 😉
 
-💡 Actual Output: நாங்கள் எப்போ போவோம்?
+💡 Actual Output: நாங்கள் எப்போ போவோம் 😉
 
 Result: ✅ PASS
 
@@ -83,11 +83,11 @@ Result: ✅ PASS
 
 ## 7. ✅ Pos_Fun_0007
 
-📝 Input: naalaikku niraya velai irukkum.
+📝 Input: "naalaikku niraya velai irukkum"
 
-🎯 Expected Output: நாளைக்கு நிறைய வேலை இருக்கும்.
+🎯 Expected Output: "நாளைக்கு நிறைய வேலை இருக்கும்"
 
-💡 Actual Output: நாளைக்கு நிறைய வேலை இருக்கும்.
+💡 Actual Output: "நாளைக்கு நிறைய வேலை இருக்கும்"
 
 Result: ✅ PASS
 
@@ -287,7 +287,7 @@ Result: ✅ PASS
 
 ## 24. ✅ Pos_Fun_0024
 
-📝 Input: appavoda vaaran.
+📝 Input: APPAVODA VAARAN.
 
 🎯 Expected Output: அப்பாவோட வாறன்.
 
@@ -321,7 +321,19 @@ Result: ❌ FAIL
 
 ---
 
-## 27. ❌ Neg_Fun_0004
+## 27. ❌ Neg_Fun_0003
+
+📝 Input: naanum adshayaa,sham,luxan,keerththi ellarum yesterday 50% offer kadaikku poiddu things vaangittu, enna seivam endu yosichuttu badham paal kudikka kadaikku ponaangal.anga pona kadai poottu engalukkoo thagam.vera vazhi illama innoru kadaikku ponanga aanaal angayum juice illai.naanga thirumbi uni vanthittam. piragu canteenla milk packet vaangi kudicham. athukku piragu naanga ITPM Assignment seiya thodankinaangal.but sentance thedi thedi aluththu pochchu piragu tea ,biscurt vaangi saappiddu veedda poittam.piragu nextday vanthu canteen la irunthu start panninanga time than poguthu,ippo seithu kondu than irunthu itha eluthuran eppidium indaikkulla oru mudivukku varuvam enru ninaikkiren.
+
+🎯 Expected Output: நானும் adshaya,luxan,keerththi எல்லாரும் நேற்று 50% offer கடைக்கு போயிட்டு things வாங்கிட்டு, என்ன செய்வம் என்று யோசிச்சிட்டு badham பால் குடிக்க கடைக்கு போனங்கள்.அங்க போனா கடை பூட்டு எங்களுக்கூ தாகம்.வேற வழி இல்லாம இன்னொரு கடைக்கு போனாங்க ஆனால் அங்கையும் juice இல்லை. நாங்க திரும்பி uni வந்திட்டம். பிறகு canteenல milk packer வாங்கி குடிச்சம். அதுக்கு பிறகு நாங்க ITPM Assignment செய்ய தொடங்கினங்கள்.but sentance தேடி தேடி அலுத்து போச்சு பிறகு tea ,biscurt வாங்கி சாப்பிட்டு வீட்ட போயிட்டம்.பிறகு nextday வந்து canteen இருந்து start பண்ணினங்க time தான் போகுது,இப்போ செய்து கொண்டு தான் இருந்து இதை எழுதுறேன் எப்படியும் இண்டைக்குள்ள ஒரு முடிவுக்கு வருவம் எண்டு ninaikkiren.
+
+💡 Actual Output: naanum adshayaa,sham,luxan,keerththi ellarum yesterday 50% offer kadaikku poiddu things vaangittu, enna seivam endu yosichuttu badham paal kudikka kadaikku ponaangal.anga pona kadai poottu engalukkoo thagam.vera vazhi illama innoru kadaikku ponanga aanaal angayum juice illai.naanga thirumbi uni vanthittam. piragu canteenla milk packet vaangi kudicham. athukku piragu naanga ITPM Assignment seiya thodankinaangal.but sentance thedi thedi aluththu pochchu piragu tea ,biscurt vaangi saappiddu veedda poittam.piragu nextday vanthu canteen la irunthu start panninanga time than poguthu,ippo seithu kondu than irunthu itha eluthuran eppidium indaikkulla oru mudivukku varuvam enru ninaikkiren.
+
+Result: ❌ FAIL
+
+---
+
+## 28. ❌ Neg_Fun_0004
 
 📝 Input: machaan, inniku full seendaa! 
 
@@ -333,7 +345,7 @@ Result: ❌ FAIL
 
 ---
 
-## 28. ❌ Neg_Fun_0005
+## 29. ❌ Neg_Fun_0005
 
 📝 Input: naan book-la paathten.
 
@@ -345,7 +357,7 @@ Result: ❌ FAIL
 
 ---
 
-## 29. ❌ Neg_Fun_0006
+## 30. ❌ Neg_Fun_0006
 
 📝 Input: en registration number 12345678
 
@@ -357,7 +369,7 @@ Result: ❌ FAIL
 
 ---
 
-## 30. ❌ Neg_Fun_0007
+## 31. ❌ Neg_Fun_0007
 
 📝 Input: enathu pirantha thikathi 26-12-2003
 
@@ -369,7 +381,7 @@ Result: ❌ FAIL
 
 ---
 
-## 31. ❌ Neg_Fun_0008
+## 32. ❌ Neg_Fun_0008
 
 📝 Input: enathu height 55cm, weight 50kg, temperature 98.6F
 
@@ -381,7 +393,7 @@ Result: ❌ FAIL
 
 ---
 
-## 32. ❌ Neg_Fun_0009
+## 33. ❌ Neg_Fun_0009
 
 📝 Input: enathu BOC accountla Rs.20000 irukku.
 
@@ -393,7 +405,7 @@ Result: ❌ FAIL
 
 ---
 
-## 33. ❌ Neg_Fun_0010
+## 34. ❌ Neg_Fun_0010
 
 📝 Input: ennidamum nanparkaliddayum Instagram irukkirathu.
 

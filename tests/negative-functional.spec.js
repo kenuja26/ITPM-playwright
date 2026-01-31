@@ -37,7 +37,20 @@ test('Neg_Fun_0002 - Incorrect spelling', async ({ page }) => {
 test('Neg_Fun_0003 - Very long paragraph', async ({ page }) => {
   const input ='naanum adshayaa,sham,luxan,keerththi ellarum yesterday 50% offer kadaikku poiddu things vaangittu, enna seivam endu yosichuttu badham paal kudikka kadaikku ponaangal.anga pona kadai poottu engalukkoo thagam.vera vazhi illama innoru kadaikku ponanga aanaal angayum juice illai.naanga thirumbi uni vanthittam. piragu canteenla milk packet vaangi kudicham. athukku piragu naanga ITPM Assignment seiya thodankinaangal.but sentance thedi thedi aluththu pochchu piragu tea ,biscurt vaangi saappiddu veedda poittam.piragu nextday vanthu canteen la irunthu start panninanga time than poguthu,ippo seithu kondu than irunthu itha eluthuran eppidium indaikkulla oru mudivukku varuvam enru ninaikkiren.';
   const expected = 'நானும் adshaya,luxan,keerththi எல்லாரும் நேற்று 50% offer கடைக்கு போயிட்டு things வாங்கிட்டு, என்ன செய்வம் என்று யோசிச்சிட்டு badham பால் குடிக்க கடைக்கு போனங்கள்.அங்க போனா கடை பூட்டு எங்களுக்கூ தாகம்.வேற வழி இல்லாம இன்னொரு கடைக்கு போனாங்க ஆனால் அங்கையும் juice இல்லை. நாங்க திரும்பி uni வந்திட்டம். பிறகு canteenல milk packer வாங்கி குடிச்சம். அதுக்கு பிறகு நாங்க ITPM Assignment செய்ய தொடங்கினங்கள்.but sentance தேடி தேடி அலுத்து போச்சு பிறகு tea ,biscurt வாங்கி சாப்பிட்டு வீட்ட போயிட்டம்.பிறகு nextday வந்து canteen இருந்து start பண்ணினங்க time தான் போகுது,இப்போ செய்து கொண்டு தான் இருந்து இதை எழுதுறேன் எப்படியும் இண்டைக்குள்ள ஒரு முடிவுக்கு வருவம் எண்டு ninaikkiren.';
-  const actual = await typeAndConvert(page, input);
+
+  await page.goto('https://tamil.changathi.com/');
+  
+  // For long text, use fill() instead of type() to avoid timeout
+  const inputBox = page.locator('textarea');
+  await inputBox.click();
+  await inputBox.clear();
+  await inputBox.fill(input);
+  await inputBox.press(' ');
+  await page.waitForTimeout(2000); // Wait longer for long text conversion
+  await inputBox.press('Backspace');
+  await page.waitForTimeout(1000);
+  const actual = await inputBox.inputValue();
+  
   try {
     expect(actual).toBe(expected);
     addResult('Neg_Fun_0003', input, expected, actual, 'PASS');
@@ -143,7 +156,7 @@ test('Neg_Fun_0009 - English abbreviations and short forms ', async ({ page }) =
   }
 });
 
-test('Neg_Fun_0010 - English technical/', async ({ page }) => {
+test('Neg_Fun_0010 - English technical', async ({ page }) => {
   const input = 'ennidamum nanparkaliddayum Instagram irukkirathu.';
   const expected = 'என்னிடமும் நண்பர்களிடையும் Instagram இருக்கிறது.';
 

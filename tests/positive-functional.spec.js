@@ -2,9 +2,9 @@ const { test, expect } = require('@playwright/test');
 const { typeAndConvert } = require('../helper');
 const { addResult } = require('../results-logger-v2');
 
-test('Pos_Fun_0001 - Simple present sentence', async ({ page }) => {
-  const input = 'naanum ammaavum madhiyam samaikkiroam.';
-  const expected = 'நானும் அம்மாவும் மதியம் சமைக்கிறோம்.';
+test('Pos_Fun_0001 - Check extra space ', async ({ page }) => {
+  const input = 'naanum   ammaavum madhiyam samaikkiroam.';
+  const expected = 'நானும்   அம்மாவும் மதியம் சமைக்கிறோம்.';
   await page.goto('https://tamil.changathi.com/');
   const actual = await typeAndConvert(page, input);
 
@@ -17,8 +17,8 @@ test('Pos_Fun_0001 - Simple present sentence', async ({ page }) => {
   }
 });
 
-test('Pos_Fun_0002 - Simple question', async ({ page }) => {
-  const input = 'eppo varuvai';
+test('Pos_Fun_0002 - lower and upper case', async ({ page }) => {
+  const input = 'epPo vAruVai';
   const expected = 'எப்போ வருவாய்';
   await page.goto('https://tamil.changathi.com/');
   const actual = await typeAndConvert(page, input);
@@ -32,9 +32,9 @@ test('Pos_Fun_0002 - Simple question', async ({ page }) => {
   }
 });
 
-test('Pos_Fun_0003 - Past tense sentence', async ({ page }) => {
-  const input = 'naan netru schoolkku ponaen.';
-  const expected = 'நான் நேற்று ஸ்கூலுக்கு போனேன்.';
+test('Pos_Fun_0003 - place', async ({ page }) => {
+  const input = 'naan netru vavuniyaakku ponaen.';
+  const expected = 'நான் நேற்று வவுனியாக்கு போனேன்.';
   await page.goto('https://tamil.changathi.com/');
   const actual = await typeAndConvert(page, input);
 
@@ -47,9 +47,9 @@ test('Pos_Fun_0003 - Past tense sentence', async ({ page }) => {
   }
 });
 
-test('Pos_Fun_0004 - Command sentence', async ({ page }) => {
-  const input = 'satham podaadhe!';
-  const expected = 'சத்தம் போடாதே!';
+test('Pos_Fun_0004 - punctuation mark', async ({ page }) => {
+  const input = 'satham podaadhe! ';
+  const expected = 'சத்தம் போடாதே! ';
   await page.goto('https://tamil.changathi.com/');
   const actual = await typeAndConvert(page, input);
 
@@ -62,8 +62,8 @@ test('Pos_Fun_0004 - Command sentence', async ({ page }) => {
   }
 });
 
-test('Pos_Fun_0005 - Request Sentence', async ({ page }) => {
-  const input = 'ennaiyum kootikkondu poreengealaa?';
+test('Pos_Fun_0005 - capitalization each word', async ({ page }) => {
+  const input = 'Ennaiyum Kootikkondu Poreengealaa?';
   const expected = 'என்னையும் கூட்டிக்கொண்டு போறீங்களா?';
   await page.goto('https://tamil.changathi.com/');
   const actual = await typeAndConvert(page, input);
@@ -77,9 +77,9 @@ test('Pos_Fun_0005 - Request Sentence', async ({ page }) => {
   }
 });
 
-test('Pos_Fun_0006 - formal Polite sentence', async ({ page }) => {
-  const input = 'naangal eppo povom?';
-  const expected = 'நாங்கள் எப்போ போவோம்?';
+test('Pos_Fun_0006 - emoji', async ({ page }) => {
+  const input = 'naangal eppo povom 😉';
+  const expected = 'நாங்கள் எப்போ போவோம் 😉';
   await page.goto('https://tamil.changathi.com/');
   const actual = await typeAndConvert(page, input);
 
@@ -92,9 +92,9 @@ test('Pos_Fun_0006 - formal Polite sentence', async ({ page }) => {
   }
 });
 
-test('Pos_Fun_0007 - Future tense sentence', async ({ page }) => {
-  const input = 'naalaikku niraya velai irukkum.';
-  const expected = 'நாளைக்கு நிறைய வேலை இருக்கும்.';
+test('Pos_Fun_0007 - single code', async ({ page }) => {
+  const input = '"naalaikku niraya velai irukkum"';
+  const expected = '"நாளைக்கு நிறைய வேலை இருக்கும்"';
   await page.goto('https://tamil.changathi.com/');
   const actual = await typeAndConvert(page, input);
 
@@ -107,7 +107,7 @@ test('Pos_Fun_0007 - Future tense sentence', async ({ page }) => {
   }
 });
 
-test('Pos_Fun_0008 - Compound sentence', async ({ page }) => {
+test('Pos_Fun_0008 - Compound', async ({ page }) => {
   const input = 'naanum nanbargalum vakuppirkku poyittu saappida povom.';
   const expected = 'நானும் நண்பர்களும் வகுப்பிற்கு போயிட்டு சாப்பிட போவோம்.';
   await page.goto('https://tamil.changathi.com/');
@@ -345,8 +345,8 @@ test('Pos_Fun_0023 - Imperative Sentence', async ({ page }) => {
   }
 });
 
-test('Pos_Fun_0024 - Simple Sentence', async ({ page }) => {
-  const input = 'appavoda vaaran.';
+test('Pos_Fun_0024 - upper case', async ({ page }) => {
+  const input = 'APPAVODA VAARAN.';
   const expected = 'அப்பாவோட வாறன்.';
   await page.goto('https://tamil.changathi.com/');
   const actual = await typeAndConvert(page, input);
@@ -359,3 +359,4 @@ test('Pos_Fun_0024 - Simple Sentence', async ({ page }) => {
     throw error;
   }
 });
+
